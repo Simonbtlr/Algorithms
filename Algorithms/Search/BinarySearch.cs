@@ -2,10 +2,12 @@ namespace Algorithms.Search;
 
 public class BinarySearch
 {
-    public int Search (List<int> list, int item)
+    
+    // O(Log N)
+    public int Search (int[] list, int item)
     {
         var low = 0;
-        var high = list.Count;
+        var high = list.Length;
 
         while (low <= high)
         {
