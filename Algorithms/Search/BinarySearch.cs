@@ -1,10 +1,9 @@
 namespace Algorithms.Search;
 
-public class BinarySearch
+public static class BinarySearch
 {
-    
     // O(Log N)
-    public int Search (int[] list, int item)
+    public static int Search (int[] list, int item)
     {
         var low = 0;
         var high = list.Length;

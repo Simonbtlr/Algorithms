@@ -8,7 +8,7 @@ public static class Program
     {
         var list = new[] { 1, 3, 5, 7, 9 };
 
-        Console.WriteLine(new BinarySearch().Search(list, 3));  // 1
-        Console.WriteLine(new BinarySearch().Search(list, -1)); // 0
+        Console.WriteLine(BinarySearch.Search(list, 3));  // 1
+        Console.WriteLine(BinarySearch.Search(list, -1)); // 0
     }
 }
