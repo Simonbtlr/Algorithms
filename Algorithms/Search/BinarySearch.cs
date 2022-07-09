@@ -3,10 +3,10 @@ namespace Algorithms.Search;
 public static class BinarySearch
 {
     // O(Log N)
-    public static int Search (int[] list, int item)
+    public static int Search (List<int> list, int item)
     {
         var low = 0;
-        var high = list.Length;
+        var high = list.Count;
 
         while (low <= high)
         {
