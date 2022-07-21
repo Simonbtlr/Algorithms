@@ -1,10 +1,9 @@
 namespace Algorithms.Utils;
 
-public static class IEnumerableExtensions
+public static class Extensions
 {
     public static void PrintAll<T>(this IEnumerable<T> list)
     {
-        var test = string.Join(", ", list);
-        Console.WriteLine(test);
+        Console.WriteLine(string.Join(", ", list));
     }
 }

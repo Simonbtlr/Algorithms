@@ -1,4 +1,5 @@
-﻿using Algorithms.Search;
+﻿using Algorithms.Math;
+using Algorithms.Search;
 using Algorithms.Sort;
 using Algorithms.Utils;
 
@@ -16,5 +17,9 @@ public static class Program
         list = new List<int> { 5, 3, 6, 2, 10 };
 
         SelectionSort.Sort(list).PrintAll();    // 2, 3, 5, 6, 10,
+
+        list = new List<int> { 1, 5, 2, 6, 7, 3 };
+
+        Console.WriteLine(MySum.Sum(list));    // 24
     }
 }
