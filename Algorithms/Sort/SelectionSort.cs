@@ -2,9 +2,11 @@ namespace Algorithms.Sort;
 
 public static class SelectionSort
 {
-    public static List<int> Sort(List<int> list)
+    // O(n^2)
+    public static IEnumerable<int> Sort(IEnumerable<int> arr)
     {
         var sorted = new List<int>();
+        var list = arr.ToList();
 
         while (list.Count != 0)
         {
@@ -18,8 +20,9 @@ public static class SelectionSort
         return sorted;
     }
 
-    private static int FindSmallest(List<int> list)
+    private static int FindSmallest(IEnumerable<int> arr)
     {
+        var list = arr.ToList();
         var smallest = list[0];
         var smallestIndex = 0;
 
