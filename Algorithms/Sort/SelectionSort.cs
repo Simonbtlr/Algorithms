@@ -2,11 +2,10 @@ namespace Algorithms.Sort;
 
 public static class SelectionSort
 {
-    // O(n^2)
-    public static IEnumerable<int> Sort(IEnumerable<int> arr)
+    public static IEnumerable<int> Sort(IEnumerable<int> source)
     {
+        var list = source.ToList();
         var sorted = new List<int>();
-        var list = arr.ToList();
 
         while (list.Count != 0)
         {

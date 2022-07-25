@@ -2,3 +2,9 @@
 
 /Algorithms/obj/
 /Algorithms/bin/
+
+/Tests/Algorithms.UnitTests/obj/
+/Tests/Algorithms.UnitTests/bin/
+
+/Tests/Algorithms.UnitTests.Common/obj/
+/Tests/Algorithms.UnitTests.Common/bin/

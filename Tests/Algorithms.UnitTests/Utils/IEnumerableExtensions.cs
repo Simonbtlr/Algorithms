@@ -1,4 +1,7 @@
-namespace Algorithms.Utils;
+using System;
+using System.Collections.Generic;
+
+namespace Algorithms.Tests.Utils;
 
 public static class Extensions
 {

@@ -1,10 +1,10 @@
 namespace Algorithms.Math;
 
-public static class MySum
+public static class SumRecursive
 {
-    public static int Sum(IEnumerable<int> arr)
+    public static int Sum(IEnumerable<int> source)
     {
-        var list = arr.ToList();
+        var list = source.ToList();
 
         switch (list.Count)
         {

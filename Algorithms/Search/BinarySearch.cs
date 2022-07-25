@@ -2,10 +2,11 @@ namespace Algorithms.Search;
 
 public static class BinarySearch
 {
-    // O(Log N)
-    public static int Search(IEnumerable<int> arr, int item)
+    public static int Search(
+        IEnumerable<int> source, 
+        int item)
     {
-        var list = arr.ToList();
+        var list = source.ToList();
         var low = 0;
         var high = list.Count;
 
