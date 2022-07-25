@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Algorithms.Math;
 
 public static class SumRecursive
@@ -5,7 +8,7 @@ public static class SumRecursive
     public static int Sum(IEnumerable<int> source)
     {
         var list = source.ToList();
-
+        
         switch (list.Count)
         {
             case 0:
