@@ -1,9 +1,9 @@
 namespace Algorithms.Search;
 
-public static class BinarySearch
+public static class EnumerableSearchExtensions
 {
-    public static int Search(
-        IEnumerable<int> source, 
+    public static int MyBinarySearch(
+        this IEnumerable<int> source,
         int item)
     {
         var list = source.ToList();
@@ -17,7 +17,7 @@ public static class BinarySearch
 
             if (guess == item)
                 return mid;
-            
+
             if (guess > item)
                 high = mid - 1;
             else

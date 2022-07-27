@@ -15,7 +15,7 @@ public class QuickSortTests : TestBase
         var expectedArr = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         // Act
-        var result = QuickSort.Sort(arr);
+        var result = arr.QuickSort();
 
         // Assert
         result

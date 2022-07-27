@@ -17,10 +17,10 @@ public class SumTests : TestBase
             .CreateMany<int>()
             .ToList();
         var expectedResult = arr.Sum();
-        
+
         // Act
-        var result = SumRecursive.Sum(arr);
-        
+        var result = arr.RecursiveSum();
+
         // Assert
         result
             .Should()

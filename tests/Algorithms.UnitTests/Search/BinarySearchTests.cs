@@ -17,19 +17,15 @@ public class BinarySearchTests : TestBase
         // Arrange
         var arr = Fixture
             .CreateMany<int>(10)
+            .QuickSort()
             .ToList();
-        arr = QuickSort
-            .Sort(arr)
-            .ToList();
-        
+
         var elementForSearch = arr[Random.Shared.Next(0, arr.Count)];
         var expectedResult = arr.IndexOf(elementForSearch);
-        
+
         // Act
-        var result = BinarySearch.Search(
-            source: arr, 
-            item: elementForSearch);
-        
+        var result = arr.MyBinarySearch(elementForSearch);
+
         // Assert
         result
             .Should()
