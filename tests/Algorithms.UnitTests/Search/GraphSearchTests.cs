@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Algorithms.Search.Graph;
 using Algorithms.UnitTests.Common;
 using FluentAssertions;
@@ -75,5 +76,92 @@ public class GraphSearchTests : TestBase
         result
             .Should()
             .BeNull();
+    }
+
+    [Fact]
+    public void Dijkstras_successful_case()
+    {
+        // Arrange
+        var graph = new Dictionary<string, Dictionary<string, float>>
+        {
+            {
+                "start",
+                new Dictionary<string, float>
+                {
+                    {"a", 6},
+                    {"b", 2}
+                }
+            },
+            {
+                "a",
+                new Dictionary<string, float>
+                {
+                    {"fin", 1}
+                }
+            },
+            {
+                "b",
+                new Dictionary<string, float>
+                {
+                    {"a", 3},
+                    {"fin", 5}
+                }
+            },
+            {
+                "fin",
+                new Dictionary<string, float>()
+            }
+        };
+
+        var costs = new Dictionary<string, float>
+        {
+            {
+                "a",
+                6
+            },
+            {
+                "b",
+                2
+            },
+            {
+                "fin",
+                float.PositiveInfinity
+            }
+        };
+
+        var parents = new Dictionary<string, string>
+        {
+            {
+                "a",
+                "start"
+            },
+            {
+                "b",
+                "start"
+            },
+            {
+                "fin",
+                string.Empty
+            }
+        };
+
+        var expectedPath = new Queue<string>(new[]
+        {
+            "start",
+            "b",
+            "a",
+            "fin"
+        });
+
+        // Act
+        var result = GraphSearch.DijkstrasAlgorithm(
+            graph: graph,
+            costs: costs,
+            parents: parents);
+
+        // Assert
+        result
+            .Should()
+            .BeEquivalentTo(expectedPath);
     }
 }
